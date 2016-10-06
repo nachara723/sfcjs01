@@ -1,0 +1,201 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>情報基礎２第２回目</title>
+    <link rel="stylesheet" href="style_161006.css">
+  </head>
+  <body>
+   <h1>HTMLで使用出来るタグ</h1>
+
+   <p>名前：header</p>
+   <p>意味：header 要素は、イントロダクション、ナビゲーション等のグループを表します。ひとつまたは複数の見出し以外に、ロゴ、セクションのヘッダー部分、検索フォームなども含める事ができます。</p>
+   <p>使用例：<pre><code>
+       &lt;header&gt;
+       a logo
+       &lt;/header&gt; 　　
+   </code></pre></p>
+   <br>
+   <br>
+   <p>名前：li</p>
+   <p>意味：HTML の リストアイテム要素は、リストの項目を表す為に用いられます。</p>
+   <p>使用例：<pre><code>
+      &lt;ol&gt;
+      &lt;li&gt;最初のリストアイテム&lt;/li&gt;
+      &lt;li&gt;二番目のリストアイテム&lt;/li&gt;
+      &lt;li&gt;三番目のリストアイテム&lt;/li&gt;
+      &lt;/ol&gt;
+   </code></pre></p>
+   <br>
+   <br>
+   <p>名前：ul</p>
+   <p>意味：HTML の順不同リスト 要素は、数的な順序がなく、その配置順に意味を持たないアイテムを持つリストを表します。子となるリストアイテムは基本的にドット、円形、四角形 などのスタイルを持つビュレットを伴って描画されます。</p>
+   <p>使用例：<pre><code>
+      &lt;ul&gt;
+      &lt;li&gt;first item&lt;/li&gt;
+      &lt;li&gt;second item&lt;/li&gt;
+      &lt;li&gt;third item&lt;/li&gt;
+      &lt;/ul&gt;</code></pre></p>
+   <br>
+   <br>
+   <p>名前：pre</p>
+   <p>意味：HTML 整形済みテキスト要素は、整形済みテキスト (preformatted text) を表します。この要素内の空白文字や改行はそのままレンダリングに反映され、等幅フォントで表示されます。もしこれらのスタイルを変更したい場合は、CSS を用います。</p>
+   <p>使用例：<pre><code>
+       
+&lt;!-- CSS コードを表示する例 --&gt;
+&lt;pre&gt;
+html, body { margin: 0; }
+
+body {
+  padding: 8em;
+  background: #000;
+  color: #fff;
+}
+
+a:link { color: #eee; }
+a:visited { color: #ddd; }
+a:hover,
+a:focus { color: #ff0; }
+a:active { color: #fff; }
+&lt;/pre&gt;</code></pre></p>
+   <br>
+   <br>
+   <p>名前：strong</p>
+   <p>意味：strong 要素は重要なテキストを表します。ほとんどのブラウザーのデフォルトスタイルでは、太字で描画するように指定されています。</p>
+   <p>使用例：<pre><code>
+       &lt;p&gt;When doing x it is &lt;strong&gt;imperative&lt;/strong&gt; to do y before proceeding.&lt;/p&gt;
+       </code></pre></p>
+   <br>
+   <br>
+   <p>名前：audio</p>
+   <p>意味：HTML audio要素は、ドキュメント内に音声コンテンツを埋め込むために使用します。この要素は、複数の音声ソースを含むことができます。音声ソースは src 属性または要素を使用して表し、ブラウザはもっとも適切なソースを選択します。</p>
+   <p>使用例：<pre><code>
+       
+       &lt;!-- シンプルな音声再生 --&gt;
+&lt;audio src="http://developer.mozilla.org/@api/deki/files/2926/=AudioTest_(1).ogg" autoplay&gt;
+  あなたのブラウザは &lt;code&gt;audio&lt;/code&gt; 要素をサポートしていません。
+&lt;/audio&gt;
+
+&lt;!-- 字幕つきの音声再生 --&gt;
+&lt;audio src="foo.ogg"&gt;
+  &lt;track kind="captions" src="foo.en.vtt" srclang="en" label="English"&gt;
+  &lt;track kind="captions" src="foo.sv.vtt" srclang="sv" label="Svenska"&gt;
+&lt;/audio&gt;</code></pre></p>
+   <br>
+   <br>
+   <p>名前：source</p>
+   <p>意味：source 要素は HTML5 文書におけるpicture要素、audio 要素及び video 要素に対し、複数のメディアリソースを指定する場合に用います。この要素自体は空要素です。この要素は一般的に、各ブラウザ毎にサポートの異なる複数のメディア形式 を指定する場合に用います。</p>
+   <p>使用例：<pre><code>
+       
+       &lt;video controls&gt;
+  &lt;source src="foo.ogg" type="video/ogg"&gt; &lt;!-- Firefox が採用 --&gt;
+  &lt;source src="foo.mov" type="video/quicktime"&gt; &lt;!-- Safari　が採用 --&gt;
+  I'm sorry; your browser doesn't support HTML5 video.
+&lt;/video&gt;
+       </code></pre></p>
+   <br>
+   <br>
+   <p>名前：map</p>
+   <p>意味：HTML map要素はイメージマップ (クリック可能なリンク領域) を定義するために、area要素とともに使用します。</p>
+      <p>使用例：<pre><code>
+          
+          &lt;map name="example-map-1"&gt;
+  &lt;area shape="circle" coords="200,250,25" href="another.htm" /&gt;
+  &lt;area shape="default" /&gt;
+&lt;/map&gt;</code></pre></p>
+   <br>
+   <br>
+   <p>名前：canvas</p>
+   <p>意味：HTML の canvas 要素は、スクリプティング (基本的には JavaScript) によりグラフィックを描画することができます。例えば、グラフの描画、写真の合成、さらにはアニメーションの作成までが可能です。canvas のブロック内で、代替コンテンツを提供することが可能 (また、提供すべき) です。その内容物は、canvas をサポートしない古いブラウザおよび JavaScript が無効であるブラウザで描画されます。</p>
+   <p>使用例：<pre><code>
+       
+       &lt;canvas id="mycanvas" moz-opaque&gt;&lt;/canvas&gt;
+       </code></pre></p>
+   <br>
+   <br>
+   <p>名前：button</p>
+   <p>意味：HTML の button 要素は、クリック可能なボタンを表します。</p>
+   <p>使用例：<pre><code>
+       
+       &lt;button name="button"&gt;Click me&lt;/button&gt;
+       </code></pre></p>
+   
+
+
+
+   <h1>CSS属性</h1>
+
+   <p>名前：</p>
+   <p>意味：</p>
+   <p>使用例：<pre><code>
+   </code></pre></p>
+   <br>
+   <br>
+
+   <p>名前：font-stretch</p>
+   <p>意味：font-stretch CSS プロパティは、フォントのフェイス normal、condensed、expanded を選択します。</p>
+   <p>使用例：
+       <div class="font-stretch-smpl">
+           <div class="smpl1">SFC</div> <div class="smpl2">SFC</div> <div class="smpl3">SFC</div>
+       </div>
+       <pre><code>
+font-stretch: condensed;
+font-stretch: normal;
+font-stretch: expanded;
+</code><pre>
+   </p>
+   <br>
+   <br>
+
+   <p>名前：</p>
+   <p>意味：</p>
+   <p>使用例：</p>
+   <br>
+   <br>
+
+   <p>名前：</p>
+   <p>意味：</p>
+   <p>使用例：</p>
+   <br>
+   <br>
+   
+   <p>名前：</p>
+   <p>意味：</p>
+   <p>使用例：</p>
+   <br>
+   <br>
+
+   <p>名前：</p>
+   <p>意味：</p>
+   <p>使用例：</p>
+   <br>
+   <br>
+
+   <p>名前：</p>
+   <p>意味：</p>
+   <p>使用例：</p>
+   <br>
+   <br>
+
+   <p>名前：</p>
+   <p>意味：</p>
+   <p>使用例：</p>
+   <br>
+   <br>
+
+   <p>名前：</p>
+   <p>意味：</p>
+   <p>使用例：</p>
+   <br>
+   <br>
+
+   <p>名前：</p>
+   <p>意味：</p>
+   <p>使用例：</p>
+   <br>
+   <br>
+
+   
+
+  </body>
+</html>
